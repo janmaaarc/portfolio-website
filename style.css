@@ -345,12 +345,6 @@ strong {
     padding-top: 0.75rem;
 }
 
-/* --- Card Link Wrapper --- */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* --- Horizontal Scroll Hint --- */
 .horizontal-scroll-wrapper {
     position: relative;
@@ -437,12 +431,23 @@ strong {
 }
 
 /* Style for ongoing projects */
-.project-card.project-ongoing {
-    filter: blur(5px);
-    opacity: 0.6;
-    pointer-events: none;
-    user-select: none;
+.project-card.project-ongoing h3::after {
+    content: 'Ongoing';
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem; /* Add some space between title and badge */
 }
+
+.project-card.project-wip {
+    opacity: 0.5;
+    filter: blur(8px);
+}
+
+
 .project-links {
     display: flex;
     gap: 1rem;
