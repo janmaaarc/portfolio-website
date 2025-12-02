@@ -6,7 +6,7 @@ Welcome to the repository for my personal portfolio website. This project showca
 
 ---
 
-![image](https://via.placeholder.com/800x400.png?text=Your+Portfolio+Screenshot)
+![image](images/website.png)
 
 ---
 
