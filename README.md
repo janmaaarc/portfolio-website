@@ -10,17 +10,17 @@ Welcome to the repository for my personal portfolio website. This project showca
 
 ---
 
-## 🚀 Technologies Used
+## Technologies Used
 
 This project was built using the following technologies:
 
-*   **Frontend:** [e.g., React, Next.js, HTML5, CSS3]
-*   **Styling:** [e.g., Tailwind CSS, Sass, CSS Modules]
-*   **Deployment:** [e.g., Vercel, Netlify, GitHub Pages]
+*   **Frontend:** HTML5, Vanilla JavaScript (ES6+)
+*   **Styling:** CSS3 with Custom Properties
+*   **Deployment:** Netlify
 
 ---
 
-## ✨ Features
+## Features
 
 *   **Responsive Design:** Looks great on all devices.
 *   **Project Showcase:** A dedicated section to display my work with links to live demos and source code.
@@ -29,27 +29,21 @@ This project was built using the following technologies:
 
 ---
 
-## 📦 Local Development
+## Local Development
 
 To run this project locally, follow these steps:
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/portfolio.git
+    git clone https://github.com/janmaaarc/portfolio.git
     cd portfolio
     ```
-2.  Install dependencies (replace with your package manager if not using npm):
-    ```bash
-    npm install
-    ```
-3.  Start the development server:
-    ```bash
-    npm run dev
-    ```
+2.  Open the `index.html` file in your web browser.
+    *   For the best experience, I recommend using a live server extension (like "Live Server" in VSCode) to automatically reload the page when you make changes.
 
 ---
 
-## 📫 Contact
+## Contact
 
-*   **Email:** `[your-email@example.com]`
-*   **LinkedIn:** `[Your LinkedIn Profile URL]`
+*   **Email:** `janmarccolomaaa@gmail.com`
+*   **LinkedIn:** `https://www.linkedin.com/in/janmarccoloma/`
