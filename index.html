@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Marc Coloma | Cloud Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+
+        <div class="header-grid" data-animate>
+            <div class="header-text-content">
+                <div class="typing-container">
+                    <h1>Hi, I'm&nbsp;<span id="typing-text"></span></h1>
+                </div>
+                <p class="bio">
+                    Aspiring <strong>Cloud Engineer</strong> fueled by <strong>matcha</strong> and a deep love for <strong>AWS</strong>. Give me a complex diagram, and I'll hand you self-managing, scalable infrastructure. I believe the best deployment is the one you don't have to watch.
+                </p>
+            </div>
+            <div class="header-image-container">
+                <div class="image-wrapper">
+                    <img id="clickable-image" src="images/me-1.jpg" alt="Jan Marc Coloma" title="Click me to change picture!">
+                </div>
+            </div>
+        </div>
+
+        <section class="section" data-animate>
+            <h2>About</h2>
+            <p class="about-text">
+                I am a <strong>Computer Engineering graduate</strong>, bridging the gap between hardware logic and cloud infrastructure. While my degree provided a strong foundation in systems architecture, my passion is in <strong>Cloud Engineering</strong> and <strong>DevOps</strong>.
+                <br><br>
+                I am actively deepening my expertise within the AWS ecosystem as I prepare to take the <strong>AWS Certified Cloud Practitioner</strong> exam. My current focus is on mastering <strong>Infrastructure as Code (Terraform)</strong> and container orchestration, turning complex diagrams into reliable, automated environments.
+            </p>
+        </section>
+
+        <section class="section" data-animate>
+            <h2>Skills</h2>
+            <div class="skills-list has-will-change" data-stagger-children>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">Terraform</span>
+                <span class="skill-item">IaC</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">Kubernetes</span>
+                <span class="skill-item">CI/CD</span>
+                <span class="skill-item">Firebase</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">Bash</span>
+                <span class="skill-item">MySQL</span>
+                <span class="skill-item">SQL</span>
+                <span class="skill-item">InfluxDB</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">GitHub</span>
+                <span class="skill-item">VSCode</span>
+                <span class="skill-item">YAML</span>
+                <span class="skill-item">Linux</span>
+                <span class="skill-item">Networking</span>
+            </div>
+        </section>
+
+        <section class="section" data-animate>
+            <h2>Work Experience</h2>
+            <ul class="list experience-list">
+                <li class="list-item experience-item collapsible">
+                    <div class="item-header">
+                        <img src="images/nia-logo.png" alt="National Irrigation Administration Logo" class="item-logo-img">
+                        <div class="item-details">
+                            <h3>IT Support Intern <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></h3>
+                            <p>National Irrigation Administration (NIA)</p> 
+                        </div>
+                        <div class="item-date">June - Aug 2024</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Provided technical support for office systems, improving uptime and reliability. Assisted in troubleshooting network and system issues, strengthening foundational IT operations skills. Organized digital records and databases to ensure efficient data management.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" data-animate>
+            <h2>Education</h2>
+            <ul class="list education-list">
+                <li class="list-item education-item">
+                    <img src="images/csu-logo.png" alt="Cagayan State University Logo" class="item-logo-img">
+                    <div class="item-details">
+                        <h3>Bachelor of Science in Computer Engineering</h3>
+                        <p>Cagayan State University</p>
+                    </div>
+                    <div class="item-date">Aug 2021 - July 2025</div>
+                </li>
+                <li class="list-item education-item">
+                    <img src="images/uslt-logo.png" alt="University of Saint Louis Tuguegarao Logo" class="item-logo-img">
+                    <div class="item-details">
+                        <h3>Science, Technology, Engineering, and Mathematics (STEM)</h3>
+                        <p>University of Saint Louis Tuguegarao</p>
+                    </div>
+                    <div class="item-date">Aug 2019 - May 2021</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" data-animate>
+            <h2>My Projects</h2>
+            <div class="horizontal-scroll-wrapper">
+                <ul class="list projects-list">
+                    <li class="list-item project-card">
+                        <img src="images/project-api.png" alt="Serverless Resume API Cover Photo" class="project-cover-image">
+                        <div class="item-details">
+                            <h3>Serverless Resume (PDF)</h3>
+                            <p class="project-description">A serverless API built on AWS using Lambda and API Gateway to serve my resume PDF from a private S3 bucket.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Lambda</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">API Gateway</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hfgifcsmy7.execute-api.ap-southeast-2.amazonaws.com/v2/resume" class="project-link" target="_blank">View Resume</a>
+                            <a href="https://github.com/janmaaarc/aws-serverless-resume-api" class="source-link" target="_blank" aria-label="Source Code">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-item project-card project-ongoing">
+                        <img src="images/project-terraform.jpg" alt="3-Tier Terraform Arch Cover Photo" class="project-cover-image">
+                        <div class="item-details">
+                            <h3>3-Tier Terraform Arch</h3>
+                            <p class="project-description">Infrastructure as Code for a classic 3-tier web architecture on AWS using Terraform.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">VPC</span>
+                                <span class="tech-tag">EC2</span>
+                                <span class="tech-tag">ALB</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">View Project</a>
+                            <a href="#" class="source-link" target="_blank" aria-label="Source Code">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-item project-card project-ongoing">
+                        <img src="images/project-cicd.jpg" alt="CI/CD Pipeline Cover Photo" class="project-cover-image">
+                        <div class="item-details">
+                            <h3>CI/CD Pipeline for Portfolio</h3>
+                            <p class="project-description">An automated pipeline to build and deploy this portfolio website to an S3 bucket.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-tag">GitHub Actions</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">CloudFront</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">View Project</a>
+                            <a href="#" class="source-link" target="_blank" aria-label="Source Code">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-item project-card project-ongoing">
+                        <img src="images/project-k8s.jpg" alt="Kubernetes Cluster Cover Photo" class="project-cover-image">
+                        <div class="item-details">
+                            <h3>Kubernetes Cluster Deployment</h3>
+                            <p class="project-description">A complete setup of a Kubernetes cluster on AWS EKS, managed with Terraform, for deploying containerized applications.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">EKS</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Terraform</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">View Project</a>
+                            <a href="#" class="source-link" target="_blank" aria-label="Source Code">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-item project-card project-ongoing">
+                        <img src="images/project-monitoring.jpg" alt="Cloud Monitoring Dashboard Cover Photo" class="project-cover-image">
+                        <div class="item-details">
+                            <h3>Cloud Monitoring Dashboard</h3>
+                            <p class="project-description">A centralized logging and monitoring solution using AWS CloudWatch and Grafana to visualize application and infrastructure metrics.</p>
+                            <div class="tech-stack-list">
+                                <span class="tech-tag">CloudWatch</span>
+                                <span class="tech-tag">Grafana</span>
+                                <span class="tech-tag">EC2</span>
+                                <span class="tech-tag">IAM</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">View Project</a>
+                            <a href="#" class="source-link" target="_blank" aria-label="Source Code">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" data-animate>
+            <h2>Certificates</h2>
+            <ul id="certificate-list" class="list certificates-list">
+                <li class="list-item certificate-item">
+                    <div class="item-details">
+                        <h3>AWS Cloud Practitioner Essentials</h3>
+                        <p>Amazon Web Services (AWS)</p>
+                    </div>
+                    <div class="item-date">Nov 2025</div>
+                    <a href="certificates/cloud-practitioner-essentials_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+                <li class="list-item certificate-item">
+                    <div class="item-details">
+                        <h3>AWS Security Fundamentals</h3>
+                        <p>Amazon Web Services (AWS)</p>
+                    </div>
+                    <div class="item-date">Nov 2025</div>
+                    <a href="certificates/Unknown_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+                <li class="list-item certificate-item">
+                    <div class="item-details">
+                        <h3>AWS SimuLearn: Cloud Practitioner</h3>
+                        <p>Amazon Web Services (AWS)</p>
+                    </div>
+                    <div class="item-date">Nov 2025</div>
+                    <a href="certificates/Unknown-13_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+                <li class="list-item certificate-item">
+                    <div class="item-details">
+                        <h3>GIT</h3>
+                        <p>Simplilearn</p>
+                    </div>
+                    <div class="item-date">Nov 2025</div>
+                    <a href="https://simpli-web.app.link/e/R7FusvJVLYb" class="certificate-link" target="_blank">View Credentials</a>
+                </li>
+                <li class="list-item certificate-item certificate-hidden">
+                    <div class="item-details">
+                        <h3>Getting Started with DevOps on AWS</h3>
+                        <p>Amazon Web Services (AWS)</p>
+                    </div>
+                    <div class="item-date">Nov 2025</div>
+                    <a href="certificates/Unknown-14_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+                <li class="list-item certificate-item certificate-hidden">
+                    <div class="item-details">
+                        <h3>Introduction to Cloud Security</h3>
+                        <p>Simplilearn</p>
+                    </div>
+                    <div class="item-date">Oct 2025</div>
+                    <a href="certificates/I2CSUpdate20251101-32-4fx8uq_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+                <li class="list-item certificate-item certificate-hidden">
+                    <div class="item-details">
+                        <h3>Introduction to Cybersecurity</h3>
+                        <p>Cisco</p>
+                    </div>
+                    <div class="item-date">Oct 2025</div>
+                    <a href="certificates/intro-to-cloud-sec-cert_page-0001.jpg" class="certificate-link" target="_blank">View Certificate</a>
+                </li>
+
+            </ul>
+            <div class="view-more-container">
+                <button id="view-more-certs-btn" class="view-more-btn">View more</button>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="floating-dock">
+        <a href="#" class="dock-icon active" aria-label="Home" data-tooltip="Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/janmarccoloma/" target="_blank" rel="noopener noreferrer" class="dock-icon" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/janmaaarc" target="_blank" rel="noopener noreferrer" class="dock-icon" aria-label="GitHub" data-tooltip="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="mailto:janmarccolomaaa@gmail.com" class="dock-icon" aria-label="Email" data-tooltip="Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </nav>
+
+    <!-- Lightbox Modal for Project Images -->
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
