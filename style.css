@@ -684,6 +684,17 @@ strong {
     line-height: 1;
 }
 
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 100px; /* Add space so it doesn't overlap with the dock */
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 600px) {
     body {
