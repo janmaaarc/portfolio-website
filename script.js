@@ -87,7 +87,7 @@ const App = {
             if (!dock || dockIcons.length === 0) return;
 
             this.createTooltip();
-            this.addMagnification(dock, dockIcons);
+            // this.addMagnification(dock, dockIcons); // This JS-based magnification overrides the CSS hover effect.
             this.addTooltipEvents(dockIcons);
         },
 
@@ -145,10 +145,9 @@ const App = {
                 mouseX = -1;
                 dockIcons.forEach(icon => { 
                     icon.style.transition = 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)';
-                    icon.style.transform = 'translateX(0) translateY(0) scale(1)'; 
-                    icon.addEventListener('transitionend', () => {
-                        icon.style.transition = 'transform 0.1s linear, background-color 0.2s ease, color 0.2s ease';
-                    }, { once: true });
+                    icon.style.transform = 'translateX(0) translateY(0) scale(1)';
+                    // After the transition ends, remove the inline style so CSS can take over.
+                    icon.addEventListener('transitionend', () => icon.style.transition = '', { once: true });
                 });
             });
         },

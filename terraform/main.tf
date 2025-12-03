@@ -104,6 +104,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cloudfront_default_certificate = true
   }
 
+  logging_config {
+    include_cookies = false
+    # You would create another S3 bucket for logs, e.g., aws_s3_bucket.logs.bucket
+    # bucket          = "your-portfolio-logs-bucket.s3.amazonaws.com" 
+    prefix          = "cloudfront/"
+  }
+
 }
 
 # 8. Create an IAM OIDC provider for GitHub Actions

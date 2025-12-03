@@ -143,5 +143,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-*   **Jan Marc Coloma** - LinkedIn
+*   **Jan Marc Coloma** - https://www.linkedin.com/in/janmarccoloma/
 *   **Project Link** - https://github.com/janmaaarc/portfolio-website
