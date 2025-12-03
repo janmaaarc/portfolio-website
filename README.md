@@ -1,49 +1,111 @@
-# My Portfolio
+# Personal Portfolio Website & Automated AWS Deployment
 
-Welcome to the repository for my personal portfolio website. This project showcases my skills, projects, and professional experience as a [Your Profession, e.g., Software Engineer].
+[![Deploy to AWS](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml)
 
-**Live Demo:** [https://janmarc-portfolio.netlify.app](https://janmarc-portfolio.netlify.app)
+This repository contains the source code for my personal portfolio website. It's not just a showcase of my projects, but also a demonstration of modern cloud engineering practices. The entire infrastructure is defined as code using **Terraform** and deployed automatically via a **GitHub Actions CI/CD pipeline** to a secure and globally distributed **AWS** environment.
 
----
+**Live Site:** [d1pb9ceg4g88xe.cloudfront.net](https://d1pb9ceg4g88xe.cloudfront.net)
 
-![image](images/website.png)
-
----
-
-## Technologies Used
-
-This project was built using the following technologies:
-
-*   **Frontend:** HTML5, Vanilla JavaScript (ES6+)
-*   **Styling:** CSS3 with Custom Properties
-*   **Deployment:** Netlify
+![Portfolio Screenshot](images/cd_pipeline_for_portfolio_website.png)
 
 ---
 
-## Features
+## 🚀 About The Project
 
-*   **Responsive Design:** Looks great on all devices.
-*   **Project Showcase:** A dedicated section to display my work with links to live demos and source code.
-*   **About Me:** A section about my background, skills, and interests.
-*   **Contact:** An easy way for visitors to get in touch.
+This is a fully responsive, single-page portfolio designed to showcase my skills and projects as a Cloud Engineer. It features a clean, modern aesthetic with a focus on user experience and technical excellence, both on the front-end and the back-end.
+
+### Key Features
+
+*   **Dynamic Content**: Includes a typing animation, collapsible sections for work experience, and a "view more" feature for certificates.
+*   **Modern UI/UX**: Features a light/dark mode theme toggle, smooth scroll-based animations, and a floating navigation dock.
+*   **Fully Responsive**: Adapts seamlessly to all screen sizes, from mobile phones to desktop monitors.
+*   **Infrastructure as Code (IaC)**: The entire AWS infrastructure is managed declaratively using Terraform.
+*   **Automated CI/CD**: Every `git push` to the main branch automatically triggers a GitHub Actions workflow that syncs the website files to S3 and invalidates the CloudFront cache.
+*   **Secure & Performant**: Hosted on S3, distributed globally via CloudFront CDN, and secured with an OAC (Origin Access Control) to keep the S3 bucket private.
 
 ---
 
-## Local Development
+## 🛠️ Built With
 
-To run this project locally, follow these steps:
+The project is built with a combination of modern front-end technologies and a robust cloud infrastructure.
+
+### Front-End
+
+*   **HTML5**
+*   **CSS3**: With custom properties for theming and responsive design.
+*   **JavaScript**: For interactive elements like the theme toggle, animations, and collapsible content.
+
+### Back-End & Infrastructure (AWS)
+
+*   **Terraform**: For defining and provisioning all cloud resources.
+*   **GitHub Actions**: For orchestrating the CI/CD pipeline.
+*   **Amazon S3**: To host the static website files.
+*   **Amazon CloudFront**: To serve as the Content Delivery Network (CDN), providing low-latency delivery and security.
+*   **AWS IAM**: To create a secure OIDC connection between GitHub Actions and AWS, allowing for passwordless deployments.
+
+---
+
+## 🏗️ Infrastructure Architecture
+
+The infrastructure is designed for security, scalability, and performance, following AWS best practices.
+
+1.  **GitHub Actions**: The CI/CD pipeline is triggered on a push to the `main` branch.
+2.  **IAM Role (OIDC)**: The workflow authenticates with AWS using a temporary role, avoiding the need for static access keys.
+3.  **Terraform**: Provisions the necessary AWS resources as defined in the `.tf` files.
+4.  **Amazon S3**: The workflow uploads the built static files (`index.html`, `style.css`, etc.) to a private S3 bucket.
+5.  **Amazon CloudFront**: Serves the content from the S3 bucket to users worldwide. It is configured with an **Origin Access Control (OAC)**, ensuring the S3 bucket is not publicly accessible.
+6.  **CloudFront Invalidation**: After the files are uploaded, the pipeline creates a CloudFront invalidation to ensure users receive the latest version of the site immediately.
+
+```mermaid
+graph TD
+    subgraph GitHub
+        A[Git Push] --> B{GitHub Actions CI/CD};
+    end
+
+    subgraph AWS
+        C[IAM Role OIDC];
+        D[S3 Bucket];
+        E[CloudFront Distribution];
+    end
+
+    B -- Assumes Role --> C;
+    B -- Syncs Files --> D;
+    B -- Invalidates Cache --> E;
+    E -- Serves Content (via OAC) --> D;
+
+    subgraph User
+        F[Browser];
+    end
+
+    F -- HTTPS Request --> E;
+```
+
+---
+
+## ⚙️ Local Development
+
+To run this project locally, you can simply open the `index.html` file in your browser.
 
 1.  Clone the repository:
-    ```bash
-    git clone https://github.com/janmaaarc/portfolio.git
-    cd portfolio
+    ```sh
+    git clone https://github.com/janmaaarc/portfolio-website.git
     ```
-2.  Open the `index.html` file in your web browser.
-    *   For the best experience, I recommend using a live server extension (like "Live Server" in VSCode) to automatically reload the page when you make changes.
+2.  Navigate to the project directory:
+    ```sh
+    cd portfolio-website
+    ```
+3.  Open `index.html` in your preferred web browser.
 
 ---
 
-## Contact
+## 📜 License
 
-*   **Email:** `janmarccolomaaa@gmail.com`
-*   **LinkedIn:** `https://www.linkedin.com/in/janmarccoloma/`
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 📧 Contact
+
+Jan Marc Coloma - LinkedIn
+
+Project Link: https://github.com/janmaaarc/portfolio-website
