@@ -105,3 +105,67 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
 }
+
+# 8. Create an IAM OIDC provider for GitHub Actions
+resource "aws_iam_openid_connect_provider" "github" {
+  url = "https://token.actions.githubusercontent.com"
+
+  client_id_list = [
+    "sts.amazonaws.com"
+  ]
+
+  thumbprint_list = ["6938fd4d9c6d15aaa29c34e00345e41b61b05ea2"] # Standard thumbprint for GitHub OIDC
+}
+
+# 9. Create an IAM role for the GitHub Actions workflow to assume
+resource "aws_iam_role" "github_actions_role" {
+  name = "github-actions-deploy-role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Principal = {
+          Federated = aws_iam_openid_connect_provider.github.arn
+        },
+        Action = "sts:AssumeRoleWithWebIdentity",
+        Condition = {
+          StringLike = {
+            "token.actions.githubusercontent.com:sub" : "repo:janmaaarc/portfolio-website:*"
+          }
+        }
+      }
+    ]
+  })
+}
+
+# 10. Attach the S3 and CloudFront permissions to the new role
+resource "aws_iam_role_policy" "github_actions_policy" {
+  role = aws_iam_role.github_actions_role.id
+  policy = data.aws_iam_policy_document.github_actions_policy.json
+}
+
+# This data source defines the permissions for the IAM role
+data "aws_iam_policy_document" "github_actions_policy" {
+  statement {
+    sid    = "AllowS3Sync"
+    effect = "Allow"
+    actions = [
+      "s3:PutObject",
+      "s3:ListBucket",
+      "s3:DeleteObject",
+    ]
+    resources = [
+      aws_s3_bucket.portfolio_bucket.arn,
+      "${aws_s3_bucket.portfolio_bucket.arn}/*",
+    ]
+  }
+
+  statement {
+    sid       = "AllowCloudFrontInvalidation"
+    effect    = "Allow"
+    actions   = ["cloudfront:CreateInvalidation"]
+    resources = [aws_cloudfront_distribution.s3_distribution.arn]
+  }
+}

@@ -9,3 +9,7 @@ output "cloudfront_distribution_id" {
 output "website_url" {
   value = "https://${aws_cloudfront_distribution.s3_distribution.domain_name}"
 }
+
+output "github_actions_role_arn" {
+  value = aws_iam_role.github_actions_role.arn
+}
