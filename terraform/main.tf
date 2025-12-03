@@ -132,6 +132,8 @@ resource "aws_iam_role" "github_actions_role" {
         Action = "sts:AssumeRoleWithWebIdentity",
         Condition = {
           StringLike = {
+            # This condition restricts the role to only be assumable by workflows
+            # from the 'janmaaarc/portfolio-website' repository.
             "token.actions.githubusercontent.com:sub" : "repo:janmaaarc/portfolio-website:*"
           }
         }
