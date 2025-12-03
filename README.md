@@ -10,7 +10,7 @@ This repository contains the source code for my personal portfolio website. It's
 
 ---
 
-## 🚀 About The Project
+## About The Project
 
 This is a fully responsive, single-page portfolio designed to showcase my skills and projects as a Cloud Engineer. It features a clean, modern aesthetic with a focus on user experience and technical excellence, both on the front-end and the back-end.
 
@@ -25,7 +25,7 @@ This is a fully responsive, single-page portfolio designed to showcase my skills
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 The project is built with a combination of modern front-end technologies and a robust cloud infrastructure.
 
@@ -45,7 +45,7 @@ The project is built with a combination of modern front-end technologies and a r
 
 ---
 
-## 🏗️ Infrastructure Architecture
+## Infrastructure Architecture
 
 The infrastructure is designed for security, scalability, and performance, following AWS best practices.
 
@@ -82,7 +82,7 @@ graph TD
 
 ---
 
-## ⚙️ Local Development
+## Local Development
 
 To run this project locally, you can simply open the `index.html` file in your browser.
 
@@ -98,13 +98,13 @@ To run this project locally, you can simply open the `index.html` file in your b
 
 ---
 
-## 📜 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📧 Contact
+## Contact
 
 Jan Marc Coloma - LinkedIn
 
