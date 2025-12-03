@@ -82,19 +82,56 @@ graph TD
 
 ---
 
-## Local Development
+## Front-End Development
 
-To run this project locally, you can simply open the `index.html` file in your browser.
+To run the front-end locally, you only need a web browser.
 
 1.  Clone the repository:
     ```sh
     git clone https://github.com/janmaaarc/portfolio-website.git
     ```
-2.  Navigate to the project directory:
+2.  Navigate to the project directory and open `index.html`:
     ```sh
     cd portfolio-website
+    # On macOS
+    open index.html
+    # On Windows
+    start index.html
     ```
-3.  Open `index.html` in your preferred web browser.
+
+---
+
+## Infrastructure Deployment with Terraform
+
+This project uses Terraform to manage all AWS resources. You can deploy the entire infrastructure from your local machine.
+
+### Prerequisites
+
+*   An AWS account with credentials configured for your terminal.
+*   Terraform CLI installed.
+*   A GitHub repository where you've forked this project.
+
+### Steps
+
+1.  **Navigate to the Terraform directory:**
+    ```sh
+    cd terraform
+    ```
+
+2.  **Update the IAM Role for Your Repository:**
+    In `main.tf`, find the `aws_iam_role.github_actions_role` resource. You **must** update the condition to point to your own GitHub repository. This is a critical security step that ensures only your repository's workflows can assume this role.
+    ```hcl
+    # In main.tf, change this line:
+    "token.actions.githubusercontent.com:sub": "repo:YOUR_GITHUB_USERNAME/YOUR_REPO_NAME:*"
+    ```
+
+3.  **Initialize and Deploy:**
+    Run the standard Terraform commands to provision the resources on AWS.
+    ```sh
+    terraform init
+    terraform plan
+    terraform apply
+    ```
 
 ---
 
@@ -106,6 +143,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Jan Marc Coloma - LinkedIn
-
-Project Link: https://github.com/janmaaarc/portfolio-website
+*   **Jan Marc Coloma** - LinkedIn
+*   **Project Link** - https://github.com/janmaaarc/portfolio-website
