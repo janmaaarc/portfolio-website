@@ -1,5 +1,7 @@
 const App = {
     init() {
+        // Run page load animation on every load.
+        this.pageLoad.init();
         this.theme.init();
         this.typing.init();
         this.dock.init();
@@ -12,6 +14,14 @@ const App = {
         this.viewMore.init();
     },
 
+    pageLoad: {
+        init() {
+            // Use window.onload to ensure all content is ready before animating.
+            window.addEventListener('load', () => {
+                document.body.classList.add('is-loaded');
+            });
+        }
+    },
     theme: {
         init() {
             const themeToggle = document.getElementById('theme-toggle');
@@ -192,7 +202,6 @@ const App = {
             viewMoreBtn.addEventListener('click', function() {
                 certificateList.classList.toggle('show-all');
                 const isShowingAll = certificateList.classList.contains('show-all');
-                this.classList.toggle('active', isShowingAll);
                 this.textContent = isShowingAll ? 'View less' : 'View more';
 
                 // Optional: Update ARIA attribute for accessibility
