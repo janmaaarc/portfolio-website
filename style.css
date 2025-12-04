@@ -95,7 +95,8 @@ strong {
 
 /* --- Typing Animation --- */
 .typing-container {
-    min-height: 70px;
+    /* Set a fixed height to prevent layout shift from text wrapping on mobile */
+    height: 90px; 
 }
 
 #typing-text::after {
