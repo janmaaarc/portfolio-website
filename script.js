@@ -223,7 +223,7 @@ const App = {
             if (!clickableImage) return;
 
             // --- Replace these with the paths to your pictures ---
-            const imageSources = [
+            const imageSources = [ // Ensure these file names are all lowercase in your repository
                 "images/me-1.jpg",
                 "images/me-2.jpg",
                 "images/me-3.jpg"
