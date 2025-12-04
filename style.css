@@ -1,6 +1,5 @@
-/* --- Base & Theming --- */
 :root {
-    /* Dark Theme (Default) */
+    /* Dark Theme */
     --bg-color: #121212;
     --primary-text: #E0E0E0;
     --secondary-text: #BDBDBD;
@@ -44,7 +43,6 @@ body {
     padding: 8rem 2rem 6rem;
 }
 
-/* --- Typography --- */
 h1 {
     font-size: 2.8rem;
     font-weight: 700;
@@ -72,7 +70,7 @@ h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0 0 0.25rem 0;
-    display: inline-flex; /* Use inline-flex to keep it on one line with the badge */
+    display: inline-flex; 
     align-items: center;
     gap: 0.35rem;
 }
@@ -97,7 +95,7 @@ strong {
 
 /* --- Typing Animation --- */
 .typing-container {
-    min-height: 70px; /* Adjusted for smaller font */
+    min-height: 70px;
 }
 
 #typing-text::after {
@@ -236,7 +234,7 @@ strong {
 }
 
 
-/* --- List Styles (Work, Projects, Edu) --- */
+/* --- List Styles (Work, Projects, Education) --- */
 .list {
     list-style: none;
     padding: 0;
@@ -268,7 +266,7 @@ strong {
 
 .item-details {
     flex-grow: 1;
-    min-width: 0; /* Prevents the item from overflowing its container */
+    min-width: 0;
 }
 
 .item-logo .logo-placeholder {
@@ -439,7 +437,7 @@ strong {
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
-    margin-inline-start: 0.5rem; /* Use logical property for better i18n support */
+    margin-inline-start: 0.5rem;
 }
 
 .project-card.project-wip {
@@ -602,7 +600,7 @@ strong {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    align-items: flex-end; /* Align icons to the bottom of the container */
+    align-items: flex-end;
     gap: 12px;
     padding: 10px;
     background: var(--dock-bg);
@@ -695,7 +693,7 @@ strong {
 .site-footer {
     text-align: center;
     padding: 2rem 1rem;
-    margin-bottom: 100px; /* Add space so it doesn't overlap with the dock */
+    margin-bottom: 100px;
 }
 
 .site-footer p {
@@ -715,7 +713,7 @@ strong {
         right: 1rem;
     }
     h1 {
-        font-size: 2.2rem; /* Slightly larger for impact */
+        font-size: 2.2rem;
     }
     h2 {
         font-size: 1.5rem;

@@ -87,7 +87,7 @@ const App = {
             if (!dock || dockIcons.length === 0) return;
 
             this.createTooltip();
-            // this.addMagnification(dock, dockIcons); // This JS-based magnification overrides the CSS hover effect.
+           
             this.addTooltipEvents(dockIcons);
         },
 
@@ -146,7 +146,7 @@ const App = {
                 dockIcons.forEach(icon => { 
                     icon.style.transition = 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)';
                     icon.style.transform = 'translateX(0) translateY(0) scale(1)';
-                    // After the transition ends, remove the inline style so CSS can take over.
+                   
                     icon.addEventListener('transitionend', () => icon.style.transition = '', { once: true });
                 });
             });
@@ -211,7 +211,7 @@ const App = {
 
             closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => {
-                // Close modal if the background is clicked, but not the image itself
+              
                 if (e.target === modal) closeModal();
             });
         }
@@ -222,9 +222,8 @@ const App = {
             const clickableImage = document.getElementById('clickable-image');
             if (!clickableImage) return;
 
-            // --- Replace these with the paths to your pictures ---
-            const imageSources = [ // Ensure these file names are all lowercase in your repository
-                "images/me-1.jpg",
+            const imageSources = [ 
+                "images/me-1.JPG",
                 "images/me-2.jpg",
                 "images/me-3.jpg"
             ];
