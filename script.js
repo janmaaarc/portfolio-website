@@ -100,7 +100,7 @@ const App = {
                 if (event.persisted && this.tooltip) {
                     this.tooltip.style.opacity = '0';
                 }
-            }
+            });
         },
 
         createTooltip() {
