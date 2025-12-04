@@ -2,18 +2,30 @@
 
 [![Deploy to AWS](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml)
 
-This repository contains the source code for my personal portfolio website. It's not just a showcase of my projects, but also a demonstration of modern cloud engineering practices. The entire infrastructure is defined as code using **Terraform** and deployed automatically via a **GitHub Actions CI/CD pipeline** to a secure and globally distributed **AWS** environment.
+This repository contains the source code for my personal portfolio website. It showcases my projects and demonstrates modern cloud engineering practices. The infrastructure is defined as code using Terraform and deployed automatically via a GitHub Actions CI/CD pipeline to a secure and globally distributed AWS environment.
+
+---
+
+## Tech Stack
+
+| Category         | Technologies Used                       |
+|-----------------|----------------------------------------|
+| Front-End        | HTML5, CSS3, JavaScript                 |
+| Back-End / Cloud | AWS S3, CloudFront, IAM, Terraform      |
+| CI/CD            | GitHub Actions                           |
+| Programming      | Python  |
 
 ---
 
 ### Key Features
 
-*   **Dynamic Content**: Includes a typing animation, collapsible sections for work experience, and a "view more" feature for certificates.
-*   **Modern UI/UX**: Features a light/dark mode theme toggle, smooth scroll-based animations, and a floating navigation dock.
-*   **Fully Responsive**: Adapts seamlessly to all screen sizes, from mobile phones to desktop monitors.
-*   **Infrastructure as Code (IaC)**: The entire AWS infrastructure is managed declaratively using Terraform.
-*   **Automated CI/CD**: Every `git push` to the main branch automatically triggers a GitHub Actions workflow that syncs the website files to S3 and invalidates the CloudFront cache.
-*   **Secure & Performant**: Hosted on S3, distributed globally via CloudFront CDN, and secured with an OAC (Origin Access Control) to keep the S3 bucket private.
+*   **Dynamic Content**: Typing animation, collapsible work experience sections, and “view more” for certificates.
+*   **Modern UI/UX**: Light/dark mode, smooth scroll animations, and floating navigation.
+*   **Fully Responsive**: Works seamlessly on all screen sizes.
+*   **Infrastructure as Code (IaC)**: Managed with Terraform.
+*   **Automated CI/CD**: GitHub Actions deploys updates to S3 and invalidates CloudFront cache automatically.
+*   **Secure & Performant**: S3 and CloudFront with private OAC (Origin Access Control) ensures security and global delivery.
+
 
 ---
 
@@ -119,6 +131,29 @@ This project uses Terraform to manage all AWS resources. You can deploy the enti
     terraform plan
     terraform apply
     ```
+
+---
+
+## File Structure
+
+The repository is organized as follows to separate concerns between the front-end application, infrastructure code, and CI/CD pipeline:
+
+```
+.
+├── .github/workflows/  # GitHub Actions CI/CD pipeline for deployment.
+│   └── deploy.yml
+├── certificates/       # Contains certificate image files.
+├── images/             # Contains static images and logos for the website.
+├── terraform/          # All Terraform files for Infrastructure as Code (IaC).
+│   ├── main.tf         # Defines AWS resources (S3, CloudFront, IAM OIDC).
+│   ├── variables.tf    # Input variables for Terraform configurations.
+│   └── outputs.tf      # Output values from Terraform (e.g., CloudFront domain name).
+├── .gitignore          # Specifies intentionally untracked files to ignore.
+├── README.md           # This documentation file.
+├── index.html          # The single-page HTML file for the portfolio.
+├── script.js           # JavaScript for dynamic features and animations.
+└── style.css           # CSS for styling the website.
+```
 
 ---
 
