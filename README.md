@@ -6,10 +6,6 @@ This repository contains the source code for my personal portfolio website. It's
 
 ---
 
-## About The Project
-
-This is a fully responsive, single-page portfolio designed to showcase my skills and projects as a Cloud Engineer. It features a clean, modern aesthetic with a focus on user experience and technical excellence, both on the front-end and the back-end.
-
 ### Key Features
 
 *   **Dynamic Content**: Includes a typing animation, collapsible sections for work experience, and a "view more" feature for certificates.
@@ -79,16 +75,16 @@ graph TD
 ---
 
 ## Front-End Development
+To run the front-end locally, clone the repository and open the `index.html` file in your browser.
 
-To run locally,
-    ```sh
-    git clone https://github.com/janmaaarc/portfolio-website.git
-    cd portfolio-website
-    # On macOS
-    open index.html
-    # On Windows
-    start index.html
-    ```
+```sh
+git clone https://github.com/janmaaarc/portfolio-website.git
+cd portfolio-website
+# On macOS, you can use:
+open index.html
+# On Windows, you can use:
+start index.html
+```
 
 ---
 
