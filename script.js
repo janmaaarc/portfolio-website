@@ -96,7 +96,6 @@ const App = {
 
             // Hide tooltip when navigating back to the page (bfcache)
             window.addEventListener('pageshow', (event) => {
-                // The 'persisted' property is true if the page is from the bfcache
                 if (event.persisted && this.tooltip) {
                     this.tooltip.style.opacity = '0';
                 }
@@ -341,16 +340,23 @@ const App = {
 
     collapsible: {
         init() {
-            const collapsibleTriggers = document.querySelectorAll('.experience-item.collapsible .arrow-icon');
+            const collapsibleItems = document.querySelectorAll('.experience-item.collapsible');
 
-            collapsibleTriggers.forEach(trigger => {
-                const collapsibleItem = trigger.closest('.experience-item');
-                const itemHeader = collapsibleItem.querySelector('.item-header'); // Get the item-header
-                
-                if (itemHeader) {
-                    itemHeader.addEventListener('click', (e) => {
-                        e.stopPropagation(); 
-                        collapsibleItem.classList.toggle('expanded');
+            collapsibleItems.forEach(item => {
+                const header = item.querySelector('.item-header');
+                // Assuming the content to collapse is the next sibling of the header
+                const content = header ? header.nextElementSibling : null;
+
+                if (header && content) {
+                    header.addEventListener('click', () => {
+                        item.classList.toggle('expanded');
+                        if (item.classList.contains('expanded')) {
+                            // On expand, set max-height to the content's scroll height
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        } else {
+                            // On collapse, set max-height back to null
+                            content.style.maxHeight = null;
+                        }
                     });
                 }
             });
