@@ -535,20 +535,29 @@ strong {
 }
 
 .view-more-btn {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--secondary-text);
+    background-color: var(--accent-color);
+    border: 1px solid transparent;
+    color: var(--bg-color);
     padding: 10px 24px;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.view-more-btn:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+@media (min-width: 768px) {
+    .view-more-btn {
+        background-color: transparent;
+        border-color: var(--border-color);
+        color: var(--secondary-text);
+    }
+
+    .view-more-btn:hover {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+        transform: translateY(-2px);
+    }
 }
 
 .project-cover-image {

@@ -192,8 +192,9 @@ const App = {
             viewMoreBtn.addEventListener('click', function() {
                 certificateList.classList.toggle('show-all');
                 const isShowingAll = certificateList.classList.contains('show-all');
-                // Use 'this' which refers to the button
+                this.classList.toggle('active', isShowingAll);
                 this.textContent = isShowingAll ? 'View less' : 'View more';
+
                 // Optional: Update ARIA attribute for accessibility
                 this.setAttribute('aria-expanded', isShowingAll);
             });
