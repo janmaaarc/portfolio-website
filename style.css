@@ -166,15 +166,30 @@ strong {
 }
 
 .skill-item {
-    background-color: transparent;
+    position: relative;
+    background-color: transparent; /* Keep background transparent */
     border: 1px solid var(--border-color);
     color: var(--secondary-text);
     padding: 6px 14px;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.25s ease, color 0.25s ease;
-    will-change: transform, background-color, color;
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.25s ease;
+    will-change: transform, color;
+    overflow: hidden; /* Hide the pseudo-element when it's scaled down */
+    z-index: 1;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--accent-color);
+    transform: scale(0);
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    border-radius: inherit;
+    z-index: -1;
 }
 
 
@@ -245,11 +260,18 @@ strong {
 }
 
 /* --- Hover effects for items that have animations --- */
-.skill-item:hover,
 .list-item:hover {
     transform: translateY(-2px);
 }
 
+.skill-item:hover {
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+.skill-item:hover::before {
+    transform: scale(1);
+}
 
 
 /* --- List Styles (Work, Projects, Education) --- */
@@ -493,6 +515,13 @@ strong {
     color: var(--secondary-text);
     font-size: 0.85rem;
     text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.source-link:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
 }
 
 /* --- Certificates Horizontal Scroll --- */
@@ -530,6 +559,9 @@ strong {
 
 .certificate-link {
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     color: var(--secondary-text);
     font-size: 0.75rem;
     transition: color 0.2s ease;
