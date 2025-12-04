@@ -80,14 +80,9 @@ graph TD
 
 ## Front-End Development
 
-To run the front-end locally, you only need a web browser.
-
-1.  Clone the repository:
+To run locally,
     ```sh
     git clone https://github.com/janmaaarc/portfolio-website.git
-    ```
-2.  Navigate to the project directory and open `index.html`:
-    ```sh
     cd portfolio-website
     # On macOS
     open index.html
