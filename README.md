@@ -6,7 +6,7 @@ This repository contains the source code for my personal portfolio website. It's
 
 **Live Site:** [d1pb9ceg4g88xe.cloudfront.net](https://d1pb9ceg4g88xe.cloudfront.net)
 
-![Portfolio Screenshot](images/cd_pipeline_for_portfolio_website.png)
+![Portfolio Screenshot](images/cicd_pipeline_for_portfolio_website.png)
 
 ---
 
