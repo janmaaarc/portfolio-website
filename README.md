@@ -1,4 +1,4 @@
-# Personal Portfolio Website & Automated AWS Deployment
+# Automated AWS Portfolio with CI/CD
 
 [![Deploy to AWS](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/janmaaarc/portfolio-website/actions/workflows/deploy.yml)
 
