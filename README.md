@@ -4,10 +4,6 @@
 
 This repository contains the source code for my personal portfolio website. It's not just a showcase of my projects, but also a demonstration of modern cloud engineering practices. The entire infrastructure is defined as code using **Terraform** and deployed automatically via a **GitHub Actions CI/CD pipeline** to a secure and globally distributed **AWS** environment.
 
-**Live Site:** [d1pb9ceg4g88xe.cloudfront.net](https://d1pb9ceg4g88xe.cloudfront.net)
-
-![Portfolio Screenshot](images/cicd_pipeline_for_portfolio_website.png)
-
 ---
 
 ## About The Project
