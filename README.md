@@ -136,8 +136,6 @@ This project uses Terraform to manage all AWS resources. You can deploy the enti
 
 ## File Structure
 
-The repository is organized as follows to separate concerns between the front-end application, infrastructure code, and CI/CD pipeline:
-
 ```
 .
 ├── .github/workflows/  # GitHub Actions CI/CD pipeline for deployment.
