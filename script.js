@@ -194,7 +194,7 @@ const App = {
             const modal = document.getElementById('lightbox-modal');
             const modalImg = document.getElementById('lightbox-image');
             const closeBtn = document.querySelector('.lightbox-close');
-            const projectImages = document.querySelectorAll('.project-cover-image');
+            const projectImages = document.querySelectorAll('.project-card:not(.project-wip) .project-cover-image');
 
             if (!modal || !modalImg || !closeBtn || projectImages.length === 0) return;
 
