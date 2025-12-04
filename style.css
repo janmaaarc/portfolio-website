@@ -95,7 +95,6 @@ strong {
 
 /* --- Typing Animation --- */
 .typing-container {
-    /* Set a fixed height to prevent layout shift from text wrapping on mobile */
     height: 90px; 
 }
 
@@ -308,13 +307,12 @@ strong {
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
     color: var(--secondary-text);
-    opacity: 0; /* Hidden by default on desktop */
+    opacity: 0;
 }
 
 .experience-item .item-header:hover .arrow-icon,
 .experience-item.expanded .arrow-icon {
     opacity: 1;
-    /* Make arrow visible on hover (desktop) or when expanded (all screens) */
 }
 
 .experience-item.expanded .arrow-icon {

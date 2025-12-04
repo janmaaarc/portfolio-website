@@ -341,21 +341,42 @@ const App = {
     collapsible: {
         init() {
             const collapsibleItems = document.querySelectorAll('.experience-item.collapsible');
+            if (collapsibleItems.length === 0) return;
+
+            const resizeObserver = new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    const item = entry.target.closest('.experience-item.collapsible');
+                    if (item && item.classList.contains('expanded')) {
+                        entry.target.style.maxHeight = entry.target.scrollHeight + 'px';
+                    }
+                }
+            });
 
             collapsibleItems.forEach(item => {
                 const header = item.querySelector('.item-header');
-                // Assuming the content to collapse is the next sibling of the header
                 const content = header ? header.nextElementSibling : null;
 
                 if (header && content) {
+                    resizeObserver.observe(content);
+
                     header.addEventListener('click', () => {
-                        item.classList.toggle('expanded');
                         if (item.classList.contains('expanded')) {
-                            // On expand, set max-height to the content's scroll height
+                            // Collapse
                             content.style.maxHeight = content.scrollHeight + 'px';
+                            requestAnimationFrame(() => {
+                                content.style.maxHeight = '0px';
+                            });
+                            item.classList.remove('expanded');
                         } else {
-                            // On collapse, set max-height back to null
-                            content.style.maxHeight = null;
+                            // Expand
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            item.classList.add('expanded');
+
+                            const handleTransitionEnd = () => {
+                                content.style.maxHeight = 'none'; // Use 'none' for auto-height
+                                content.removeEventListener('transitionend', handleTransitionEnd);
+                            };
+                            content.addEventListener('transitionend', handleTransitionEnd);
                         }
                     });
                 }
