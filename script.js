@@ -245,8 +245,8 @@ const App = {
 
             const imageSources = [ 
                 "images/me-1.JPG",
-                "images/me-2.jpg",
-                "images/me-3.jpg"
+                "images/me-2.jpeg",
+                "images/me-3.jpeg"
             ];
             let currentImageIndex = 0;
 
