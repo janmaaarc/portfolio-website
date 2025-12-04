@@ -155,10 +155,10 @@ const App = {
 
             dock.addEventListener('mouseleave', () => {
                 mouseX = -1;
-                dockIcons.forEach(icon => { 
+                dockIcons.forEach(icon => {
                     icon.style.transition = 'transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1)';
                     icon.style.transform = 'translateX(0) translateY(0) scale(1)';
-                   
+
                     icon.addEventListener('transitionend', () => icon.style.transition = '', { once: true });
                 });
             });
