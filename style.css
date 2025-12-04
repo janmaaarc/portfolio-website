@@ -167,7 +167,7 @@ strong {
 
 .skill-item {
     position: relative;
-    background-color: transparent; /* Keep background transparent */
+    background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--secondary-text);
     padding: 6px 14px;
@@ -691,10 +691,8 @@ strong {
     display: grid;
     place-items: center;
     border-radius: 12px;
-    color: var(--secondary-text); 
-    /* Animate layout properties instead of transform */
-    transition: width 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                height 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
+    color: var(--secondary-text);
+    transition: width 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 background-color 0.2s ease, color 0.2s ease;
     will-change: width, height;
 }
