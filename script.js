@@ -250,14 +250,23 @@ const App = {
             ];
             let currentImageIndex = 0;
 
-            clickableImage.addEventListener('click', () => {
+            const changeImage = () => {
                 currentImageIndex = (currentImageIndex + 1) % imageSources.length;
                 clickableImage.classList.add('is-changing');
+
                 clickableImage.addEventListener('transitionend', () => {
-                    clickableImage.src = imageSources[currentImageIndex];
-                    clickableImage.classList.remove('is-changing');
+                    // Create a temporary image to load the new source
+                    const nextImage = new Image();
+                    nextImage.src = imageSources[currentImageIndex];
+                    nextImage.onload = () => {
+                        // Once loaded, update the real image and fade it in
+                        clickableImage.src = nextImage.src;
+                        clickableImage.classList.remove('is-changing');
+                    };
                 }, { once: true });
-            });
+            };
+
+            clickableImage.addEventListener('click', changeImage);
         }
     },
 
