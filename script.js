@@ -87,8 +87,12 @@ const App = {
             if (!dock || dockIcons.length === 0) return;
 
             this.createTooltip();
-           
-            this.addTooltipEvents(dockIcons);
+
+            // Only apply magnification on non-touch/larger screens
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                this.addMagnification(dock, dockIcons);
+                this.addTooltipEvents(dockIcons);
+            }
         },
 
         createTooltip() {

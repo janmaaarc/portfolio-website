@@ -645,11 +645,14 @@ strong {
     will-change: width, height;
 }
 
-.dock-icon:hover {
-    color: var(--primary-text);
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 55px;  /* 44px * 1.25 */
-    height: 55px; /* 44px * 1.25 */
+/* Apply hover effect only on larger screens to avoid "sticky" hover on mobile */
+@media (min-width: 768px) {
+    .dock-icon:hover {
+        color: var(--primary-text);
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 55px;  /* 44px * 1.25 */
+        height: 55px; /* 44px * 1.25 */
+    }
 }
 
 .dock-icon.active {
@@ -763,6 +766,11 @@ strong {
     .floating-dock {
         padding: 8px;
         gap: 8px;
+        /* Ensure position is fixed at the bottom on mobile */
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
