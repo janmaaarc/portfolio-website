@@ -93,6 +93,14 @@ const App = {
                 this.addMagnification(dock, dockIcons);
                 this.addTooltipEvents(dockIcons);
             }
+
+            // Hide tooltip when navigating back to the page (bfcache)
+            window.addEventListener('pageshow', (event) => {
+                // The 'persisted' property is true if the page is from the bfcache
+                if (event.persisted && this.tooltip) {
+                    this.tooltip.style.opacity = '0';
+                }
+            }
         },
 
         createTooltip() {
