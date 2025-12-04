@@ -173,24 +173,10 @@ strong {
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 500;
-    opacity: 0;
-    transform: translateY(15px);
     transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.25s ease, color 0.25s ease;
     will-change: transform, background-color, color;
 }
 
-.skill-item:hover {
-    transform: translateY(-2px);
-    color: var(--bg-color);
-    background-color: var(--accent-color);
-}
-
-/* When the parent is visible, trigger the animation on the children */
-.skills-list.is-visible .skill-item {
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease-out;
-}
 
 /* --- Theme Toggle --- */
 .theme-toggle-container {
@@ -245,6 +231,26 @@ strong {
     transform: translateY(0);
 }
 
+/* --- Staggered Item Animation --- */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease-out;
+    will-change: transform, opacity;
+}
+
+.stagger-container.is-visible .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Hover effects for items that have animations --- */
+.skill-item:hover,
+.list-item:hover {
+    transform: translateY(-2px);
+}
+
+
 
 /* --- List Styles (Work, Projects, Education) --- */
 .list {
@@ -260,7 +266,7 @@ strong {
     position: relative;
     padding: 1.5rem 1rem;
     border-radius: 12px;
-    transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease-out;
     will-change: transform, background-color;
 }
 
@@ -503,11 +509,6 @@ strong {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease, box-shadow 0.3s ease;
     will-change: transform, box-shadow;
     border-radius: 12px;
-}
-
-.certificates-list .list-item:hover,
-.projects-list .list-item:hover {
-    transform: translateY(-5px);
 }
 .certificate-item.certificate-hidden {
     display: none;
