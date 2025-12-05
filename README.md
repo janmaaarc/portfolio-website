@@ -11,7 +11,7 @@ This repository contains the source code for my personal portfolio website. It s
 | Category         | Technologies Used                       |
 |-----------------|----------------------------------------|
 | Front-End        | HTML5, CSS3, JavaScript                 |
-| Back-End / Cloud | AWS S3, CloudFront, IAM, Terraform      |
+| Back-End / Cloud | AWS S3, CloudFront, AWS IAM, Terraform      |
 | CI/CD            | GitHub Actions                           |
 | Programming      | Python  |
 
